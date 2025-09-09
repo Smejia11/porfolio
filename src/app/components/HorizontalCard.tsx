@@ -37,7 +37,7 @@ function HorizontalCard({
   ) : null;
 
   return (
-    <Card className="max-w-[30rem]  shadow-lg p-4">
+    <Card className="w-full sm:max-w-md md:max-w-lg lg:max-w-xl shadow-lg p-4 ">
       <CardHeader color="blue-gray" className="relative h-52">
         <Image
           src={img}

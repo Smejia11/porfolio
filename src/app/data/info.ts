@@ -70,6 +70,50 @@ y otras entidades del sector asegurador.`,
     typeProject: "Plataforma Web",
     isPrivate: true,
   },
+  {
+    title: "Paginate-Custom",
+    image: "/github.svg",
+    business: "Personal",
+    description: `
+Esta biblioteca está diseñada para proporcionar funcionalidad de paginación de datos en diversas aplicaciones. 
+Aprovecha la potencia de TypeScript y Zod para la validación y el análisis de parámetros de paginación con seguridad de tipos.`,
+    readMore: "https://github.com/Smejia11/paginate-custom",
+    technologies: ["TypeScript"],
+    typeProject: "Utilidad",
+    isPrivate: false,
+  },
+  {
+    title: "Spring Boot JWT Ejemplo",
+    image: "/github.svg",
+    business: "Personal",
+    description: `Ejemplo de autenticación y autorización en una aplicación de Spring Boot utilizando JWT (JSON Web Tokens).`,
+    readMore: "https://github.com/Smejia11/spring-boot-jwt-auth-example",
+    technologies: ["Spring Boot", "Java", "JWT", " MySQL"],
+    typeProject: "Utilidad",
+    isPrivate: false,
+  },
+  {
+    title: "FetchCustom",
+    image: "/github.svg",
+    business: "Personal",
+    description: `FetchCustom es un contenedor liviano para la API nativa "fetch" 
+    en Node.js, que proporciona funcionalidad adicional para manejar 
+    solicitudes y respuestas HTTP mediante el patron resolver.`,
+    readMore: "https://github.com/Smejia11/FetchCustom",
+    technologies: ["TypeScript"],
+    typeProject: "Utilidad",
+    isPrivate: false,
+  },
+  {
+    title: "QueueApi",
+    image: "/github.svg",
+    business: "Personal",
+    description: `API para crear colas basadas en bull mq y express.`,
+    readMore: "https://github.com/Smejia11/QueueApi",
+    technologies: ["TypeScript", "Node.js", "Express", "Redis", "BullMQ"],
+    typeProject: "Utilidad",
+    isPrivate: false,
+  },
 ];
 
 export const infoData = {
