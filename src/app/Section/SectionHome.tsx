@@ -8,7 +8,7 @@ export default function SectionHome() {
       ref={homeRef}
       data-aos="fade-in"
       data-aos-duration="2000"
-      className="min-h-screen flex flex-col justify-center items-center p-5"
+      className="min-h-screen flex flex-col justify-center items-center p-2"
     >
       <ProfileCard />
     </section>
