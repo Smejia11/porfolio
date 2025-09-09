@@ -1,5 +1,11 @@
 import { Card, Button, Typography, Spinner } from "@material-tailwind/react";
 import { useSimpleForm } from "../hooks/useSimpleForm";
+import {
+  DevicePhoneMobileIcon,
+  EnvelopeIcon,
+  UserIcon,
+} from "@heroicons/react/24/outline";
+import { infoData } from "../data/info";
 
 export function SimpleForm() {
   const { handleSubmit, isLoading } = useSimpleForm();
@@ -8,6 +14,14 @@ export function SimpleForm() {
       <Typography variant="h4" color="blue-gray">
         Realice su consulta!
       </Typography>
+      <div className="flex items-center text-blue-gray-500 gap-2 p-1">
+        <EnvelopeIcon className="h-6 w-6" />
+        <Typography className="font-medium">{infoData.email}</Typography>
+      </div>
+      <div className="flex items-center text-blue-gray-500 gap-3 p-1">
+        <DevicePhoneMobileIcon className="h-6 w-6" />
+        <Typography className="font-medium">{infoData.phone}</Typography>
+      </div>
       <form
         className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96"
         onSubmit={handleSubmit}
@@ -38,7 +52,7 @@ export function SimpleForm() {
             <textarea
               name="description"
               placeholder="Motivo del contacto"
-              className="!resize-y w-full  rounded-md  focus:outline h-full "
+              className="w-full h-full max-h-60 resize-y  rounded-md focus:outline"
             />
           </div>
         </div>

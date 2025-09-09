@@ -1,0 +1,14 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo circular -->
+  <circle cx="60" cy="60" r="58" fill="#1e293b" stroke="#64748b" stroke-width="4"/>
+  
+  <!-- Icono de código minimalista -->
+  <polyline points="40,50 50,40 70,40 80,50" fill="none" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="40,70 50,80 70,80 80,70" fill="none" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Llama de innovación -->
+  <path d="M60 30 Q65 40 60 50 Q55 40 60 30" fill="#94a3b8"/>
+  
+  <!-- Iniciales estilo tech -->
+  <text x="60" y="115" font-family="Verdana" font-size="14" fill="#e2e8f0" text-anchor="middle">S.M.</text>
+</svg>

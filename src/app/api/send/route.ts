@@ -2,6 +2,8 @@ import { CreateEmailResponseSuccess, Resend } from "resend";
 import { NextRequest, NextResponse } from "next/server";
 import { randomUUID } from "node:crypto";
 import { generateEmailHtml } from "@/app/components/EmailTemplate";
+import validator from "validator";
+import { isValidEmailDNS } from "@/app/utils/validateDns";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const fromEmail: string | undefined = process.env.FROM_EMAIL;
@@ -20,7 +22,32 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const { email, description, name } = await req.json();
+    let { email, description, name } = await req.json();
+
+    name = validator.escape(name ?? "");
+    description = validator.escape(description ?? "");
+    email = validator.normalizeEmail(email) ?? "";
+
+    if (email && !validator.isEmail(email)) {
+      return NextResponse.json(
+        {
+          isInvalidEmail: true,
+          message: "El correo electrónico proporcionado no es válido.",
+        },
+        { status: 400 }
+      );
+    }
+
+    if (!(await isValidEmailDNS(email))) {
+      return NextResponse.json(
+        {
+          isInvalidEmail: true,
+          message:
+            "El dominio del correo electrónico proporcionado no es válido.",
+        },
+        { status: 400 }
+      );
+    }
 
     console.log("Parsed request body:", { email, description, name });
 
@@ -55,7 +82,7 @@ export async function POST(req: NextRequest) {
 
     console.log("Email sent successfully:", data);
 
-    return NextResponse.json(data);
+    return NextResponse.json("ok");
   } catch (error) {
     console.error("Unexpected error:", error);
     if (error instanceof Error)

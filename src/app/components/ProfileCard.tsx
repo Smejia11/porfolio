@@ -4,7 +4,7 @@ import {
   CardBody,
   Typography,
 } from "@material-tailwind/react";
-import { aboundMe } from "../data/info";
+import { aboundMe, infoData } from "../data/info";
 import { CardFooter } from "@material-tailwind/react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
@@ -28,7 +28,7 @@ export function ProfileCard() {
       <CardFooter className="flex justify-center gap-7 pt-2">
         {/* LinkedIn */}
         <a
-          href="https://www.linkedin.com/in/santiago-mejia-oquendo-285bba21a/"
+          href={infoData.linkedIn}
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-700 text-2xl hover:scale-110 transition-transform"
@@ -38,7 +38,7 @@ export function ProfileCard() {
 
         {/* GitHub */}
         <a
-          href="https://github.com/Smejia11"
+          href={infoData.gitHub}
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-800 text-2xl hover:scale-110 transition-transform"

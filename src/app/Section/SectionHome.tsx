@@ -6,7 +6,7 @@ export default function SectionHome() {
   return (
     <section
       ref={homeRef}
-      data-aos="fade-in"
+      data-aos="fade-down"
       data-aos-duration="3000"
       className="min-h-screen flex flex-col justify-center items-center"
     >

@@ -1,5 +1,3 @@
-
-
 export const aboundMe = {
   description: `Ingeniero Full Stack con más de 4 años de experiencia participando activamente en equipos de desarrollo
 e investigación en empresas como Noatec S.A.S. y Sistran Andina. A lo largo de este tiempo, he asumido
@@ -74,3 +72,10 @@ y otras entidades del sector asegurador.`,
   },
 ];
 
+export const infoData = {
+  email: "santiago.mejia.oquendo1@gmail.com",
+  phone: "+57 305 439 6914",
+  gitHub: "https://github.com/Smejia11",
+  linkedIn: "https://www.linkedin.com/in/santiago-mejia-oquendo-285bba21a/",
+  cv: "https://drive.google.com/file/d/1TsopFdwdGGHU9Pj93x00jeXOYVSX_eNp/view?usp=drive_link",
+};
