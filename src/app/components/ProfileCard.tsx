@@ -10,7 +10,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export function ProfileCard() {
   return (
-    <Card className="w-96 md:w-80 lg:w-96 shadow-lg">
+    <Card className="w-full max-w-sm md:max-w-md lg:max-w-lg shadow-lg rounded-xl p-4">
       <CardHeader floated={false} className="h-80">
         <img src={aboundMe.srcImage} alt="profile-picture" loading="lazy" />
       </CardHeader>
