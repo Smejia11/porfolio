@@ -18,6 +18,13 @@ export const sendEmail = async (dataEmail: EmailData) => {
     const response = await fetch(endpoint, options);
     if (!response.ok) {
       // Handle non-successful HTTP responses (e.g., 4xx or 5xx errors)
+      if (response.status === 400) {
+        const errorResponse = await response.json();
+        if (errorResponse.isInvalidEmail) {
+          SnackbarUtilities.error(errorResponse.message);
+          return;
+        }
+      }
       const errorCode = `ERR_${response.status}`;
       const errorMessage = response.statusText;
       SnackbarUtilities.error(getValidationError(errorCode ?? errorMessage));

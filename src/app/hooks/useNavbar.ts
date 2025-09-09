@@ -19,9 +19,9 @@ export const useNavbar = () => {
   }, []);
   const listNav: Array<NavItem> = [
     { ref: "home", value: "Sobre mi" },
-    { ref: "contactUs", value: "Contacto" },
     { ref: "experian", value: "Experiencia Laboral" },
     { ref: "projects", value: "Proyectos" },
+    { ref: "contactUs", value: "Contacto" },
   ];
 
   return { openNav, setOpenNav, listNav };

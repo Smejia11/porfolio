@@ -71,3 +71,11 @@ y otras entidades del sector asegurador.`,
     isPrivate: true,
   },
 ];
+
+export const infoData = {
+  email: "santiago.mejia.oquendo1@gmail.com",
+  phone: "+57 305 439 6914",
+  gitHub: "https://github.com/Smejia11",
+  linkedIn: "https://www.linkedin.com/in/santiago-mejia-oquendo-285bba21a/",
+  cv: "https://drive.google.com/file/d/1TsopFdwdGGHU9Pj93x00jeXOYVSX_eNp/view?usp=drive_link",
+};

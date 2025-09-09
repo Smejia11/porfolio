@@ -2,10 +2,11 @@ import {
   Card,
   CardHeader,
   CardBody,
-  CardFooter,
   Typography,
 } from "@material-tailwind/react";
-import { aboundMe } from "../data/info";
+import { aboundMe, infoData } from "../data/info";
+import { CardFooter } from "@material-tailwind/react";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export function ProfileCard() {
   return (
@@ -24,6 +25,27 @@ export function ProfileCard() {
           {aboundMe.description}
         </Typography>
       </CardBody>
+      <CardFooter className="flex justify-center gap-7 pt-2">
+        {/* LinkedIn */}
+        <a
+          href={infoData.linkedIn}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-700 text-2xl hover:scale-110 transition-transform"
+        >
+          <FaLinkedin />
+        </a>
+
+        {/* GitHub */}
+        <a
+          href={infoData.gitHub}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-800 text-2xl hover:scale-110 transition-transform"
+        >
+          <FaGithub />
+        </a>
+      </CardFooter>
     </Card>
   );
 }

@@ -9,6 +9,7 @@ import FabButton from "./components/FabButton";
 import { useEffect } from "react";
 import SectionExperian from "./Section/SectionExperian";
 import SectionProjects from "./Section/SectionProjects";
+import { FooterWithLogo } from "./components/Footer";
 
 export default function Home() {
   useEffect(() => {
@@ -21,6 +22,7 @@ export default function Home() {
       <SectionExperian />
       <SectionProjects />
       <SectionContactUs />
+      <FooterWithLogo />
       <FabButton />
     </SectionProvider>
   );

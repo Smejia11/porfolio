@@ -1,45 +1,40 @@
-"use client";
-import { NavItem } from "@/app/hooks/useNavbar";
-import useScroll from "@/app/hooks/useScroll";
 import { Typography } from "@material-tailwind/react";
+import { infoData } from "../data/info";
+
 
 export function FooterWithLogo() {
-  const { scrollToRef } = useScroll();
-  const listFooter: Array<NavItem> = [
-    { ref: "home", value: "Sobre nosotros" },
-    { ref: "contactUs", value: "contactenos" },
-  ];
-
+  const currentYear = new Date().getFullYear();
   return (
-    <footer className="w-full  bg-beige p-8">
-      
-      <div className="flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 bg-beige text-center md:justify-between">
-        <img src="/img/logo-ct-dark.png" alt="logo-ct" className="w-10" />
+    <footer className="w-full bg-white p-9">
+      <div className="flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 bg-white text-center md:justify-between">
+        <img src="/sm.svg" alt="logo-ct" className="w-12" />
         <ul className="flex flex-wrap items-center gap-y-2 gap-x-8">
-          {listFooter.map(({ ref, value }) => (
+          <li>
             <Typography
-              as="li"
-              key={ref}
-              color="brown"
+              as="a"
+              href="#"
+              color="blue-gray"
               className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
             >
-              <div
-                key={ref}
-                onClick={() => scrollToRef(ref)}
-                style={{ cursor: "pointer", textDecoration: "underline" }}
-              >
-                {value}
-              </div>
+              Sobre mí
             </Typography>
-          ))}
+          </li>
+          <li>
+            <Typography
+              as="a"
+              href={infoData.gitHub}
+              target="_blank"
+              color="blue-gray"
+              className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
+            >
+              Contribuir
+            </Typography>
+          </li>
         </ul>
       </div>
-      <hr className="my-9 border-brown " />
+      <hr className="my-8 border-blue-gray-50" />
       <Typography color="blue-gray" className="text-center font-normal">
-        &copy;{" "}
-        {`${new Date().toLocaleDateString(undefined, {
-          year: "numeric",
-        })} Sandra Milena Loaiza todos los derechos reservados.`}
+        &copy; {currentYear} Santiago Mejia Oquendo.
       </Typography>
     </footer>
   );

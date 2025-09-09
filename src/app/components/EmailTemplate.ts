@@ -16,11 +16,15 @@ export const escapeHtml = (input: unknown): string => {
   return text.replace(/[&<>"'`=/]/g, (char) => htmlEscapeMap[char] || char);
 };
 
-export const generateEmailHtml = (
-  name: string,
-  email: string,
-  description: string
-): string => {
+export const generateEmailHtml = ({
+  name,
+  email,
+  description,
+}: {
+  name: string;
+  email: string;
+  description: string;
+}) => {
   return `
     <!DOCTYPE html>
     <html lang="es">
