@@ -37,7 +37,7 @@ export async function POST(req: NextRequest) {
       from: fromEmail,
       to: [toEmail],
       subject: "Nuevo contacto",
-      html: generateEmailHtml(name, description, email),
+      html: generateEmailHtml({ name, description, email }),
     });
 
     console.log("Sending email:", {

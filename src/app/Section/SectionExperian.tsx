@@ -7,8 +7,8 @@ function SectionExperian() {
   return (
     <section
       className="min-h-screen max-w-full flex flex-col justify-center items-center"
-      data-aos="fade-up"
-      data-aos-duration="2000"
+      data-aos="fade-down"
+      data-aos-duration="4000"
       ref={experianRef}
     >
       {experience.map((exp) => (

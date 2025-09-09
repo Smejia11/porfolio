@@ -1,3 +1,5 @@
+
+
 export const aboundMe = {
   description: `Ingeniero Full Stack con más de 4 años de experiencia participando activamente en equipos de desarrollo
 e investigación en empresas como Noatec S.A.S. y Sistran Andina. A lo largo de este tiempo, he asumido
@@ -71,3 +73,4 @@ y otras entidades del sector asegurador.`,
     isPrivate: true,
   },
 ];
+
