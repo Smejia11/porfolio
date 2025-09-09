@@ -7,7 +7,7 @@ function SectionProjects() {
   return (
     <section
       ref={projectsRef}
-      className="min-h-screen flex flex-col md:flex-row gap-6 justify-center items-center p-10"
+      className="min-h-screen flex flex-col md:flex-row gap-6 justify-center items-center p-2"
       data-aos="fade-down"
       data-aos-duration="3000"
     >

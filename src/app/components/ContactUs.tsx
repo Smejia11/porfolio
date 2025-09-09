@@ -3,58 +3,62 @@ import { useSimpleForm } from "../hooks/useSimpleForm";
 import {
   DevicePhoneMobileIcon,
   EnvelopeIcon,
-  UserIcon,
 } from "@heroicons/react/24/outline";
 import { infoData } from "../data/info";
 
 export function SimpleForm() {
   const { handleSubmit, isLoading } = useSimpleForm();
   return (
-    <Card color="transparent" shadow={false}>
+    <Card
+      color="transparent"
+      shadow={false}
+      className="w-full max-w-lg mx-auto p-6 bg-white rounded-xl shadow-lg space-y-4"
+    >
       <Typography variant="h4" color="blue-gray">
         Realice su consulta!
       </Typography>
-      <div className="flex items-center text-blue-gray-500 gap-2 p-1">
-        <EnvelopeIcon className="h-6 w-6" />
-        <Typography className="font-medium">{infoData.email}</Typography>
+      <div className="flex flex-wrap items-center gap-2 text-blue-gray-500">
+        <EnvelopeIcon className="h-5 w-5 shrink-0" />
+        <Typography className="font-medium break-all">
+          {infoData.email}
+        </Typography>
       </div>
-      <div className="flex items-center text-blue-gray-500 gap-3 p-1">
-        <DevicePhoneMobileIcon className="h-6 w-6" />
-        <Typography className="font-medium">{infoData.phone}</Typography>
+      <div className="flex flex-wrap items-center gap-2 text-blue-gray-500">
+        <DevicePhoneMobileIcon className="h-5 w-5 shrink-0" />
+        <Typography className="font-medium break-all">
+          {infoData.phone}
+        </Typography>
       </div>
-      <form
-        className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96"
-        onSubmit={handleSubmit}
-      >
+      <form className="" onSubmit={handleSubmit}>
         <div className="mb-1 flex flex-col gap-6">
-          <Typography variant="h6" color="blue-gray" className="-mb-3">
+          <Typography variant="h6" color="blue-gray">
             Tu nombre
           </Typography>
           <input
-            className="shadow appearance-none border rounded focus:outline w-full py-2 px-3 text-brown-800 leading-tight  focus:shadow-outline"
+            className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight 
+            focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             name="name"
             type="text"
             placeholder="Nombre"
           />
-          <Typography variant="h6" color="blue-gray" className="-mb-3">
+          <Typography variant="h6" color="blue-gray">
             Email
           </Typography>
           <input
-            className="shadow appearance-none border rounded focus:outline w-full py-2 px-3 text-brown-800 leading-tight  focus:shadow-outline"
+            className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight 
+            focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             name="email"
             type="email"
             placeholder="email"
           />
-          <Typography variant="h6" color="blue-gray" className="-mb-3">
+          <Typography variant="h6" color="blue-gray">
             Motivo del contacto
           </Typography>
-          <div className="lg:w-96 lg:h-60">
-            <textarea
-              name="description"
-              placeholder="Motivo del contacto"
-              className="w-full h-full max-h-60 resize-y  rounded-md focus:outline"
-            />
-          </div>
+          <textarea
+            name="description"
+            placeholder="Motivo del contacto"
+            className="w-full h-32 max-h-60 resize-y rounded-md p-2 border focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
         </div>
 
         {isLoading ? (

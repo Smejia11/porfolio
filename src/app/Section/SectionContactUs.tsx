@@ -18,7 +18,7 @@ function SectionContactUs() {
       <SnackbarUtilitiesConfigurator />
       <section
         data-aos="zoom-in"
-        className="min-h-screen max-w-full flex flex-col justify-center items-center"
+        className="min-h-screen max-w-full flex flex-col justify-center items-center p-2"
         data-aos-duration="1000"
         ref={contactUsRef}
       >
