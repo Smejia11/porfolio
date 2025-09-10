@@ -4,13 +4,34 @@ import { randomUUID } from "node:crypto";
 import { generateEmailHtml } from "@/app/components/EmailTemplate";
 import validator from "validator";
 import { isValidEmailDNS } from "@/app/utils/validateDns";
+import { RateLimiterMemory } from "rate-limiter-flexible";
+import { getUserIP } from "@/app/utils/ip";
+import { result } from "@/app/utils/result";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const fromEmail: string | undefined = process.env.FROM_EMAIL;
 const toEmail: string | undefined = process.env.TO_EMAIL;
 
+const rateLimiter = new RateLimiterMemory({
+  points: 3, // 3 requests
+  duration: 60, // por minuto
+});
+
 export async function POST(req: NextRequest) {
   try {
+    const userIP = await getUserIP();
+    console.log("User IP:", { userIP });
+    const [err] = await result(rateLimiter.consume(userIP));
+    if (err) {
+      console.error("Rate limiting error:", err);
+      return NextResponse.json(
+        {
+          message:
+            "Demasiadas solicitudes. Por favor, inténtelo de nuevo más tarde.",
+        },
+        { status: 429 }
+      );
+    }
     console.log("Received request:", fromEmail, toEmail);
     if (!fromEmail || !toEmail) {
       return NextResponse.json(
