@@ -3,6 +3,7 @@ import { useSimpleForm } from "../hooks/useSimpleForm";
 import {
   DevicePhoneMobileIcon,
   EnvelopeIcon,
+  InboxArrowDownIcon,
 } from "@heroicons/react/24/outline";
 import { infoData } from "../data/info";
 
@@ -14,8 +15,13 @@ export function SimpleForm() {
       shadow={false}
       className="w-full max-w-lg mx-auto p-6 bg-white rounded-xl shadow-lg space-y-4"
     >
-      <Typography variant="h4" color="blue-gray">
-        Realice su consulta!
+      <Typography
+        variant="h4"
+        color="blue-gray"
+        className="flex items-center gap-2 leading-none"
+      >
+        <InboxArrowDownIcon className="h-8 w-8 shrink-0" />
+        Contacto
       </Typography>
       <div className="flex flex-wrap items-center gap-2 text-blue-gray-500">
         <EnvelopeIcon className="h-5 w-5 shrink-0" />
