@@ -11,14 +11,31 @@ de soluciones tanto en el frontend como en el backend.`,
 
 export const experience = [
   {
-    date: `Julio 2021 – Febrero 2023`,
+    date: `Julio 2021 – Enero 2023`,
     position: "INGENIERO I+D",
+    items: [
+      `-Desarrollé lógica de negocio para resolver problemas de sincronización de registros en
+la nube, garantizando la consistencia de datos en entornos distribuidos.`,
+      `-Optimicé aplicaciones web mediante técnicas avanzadas como render-as-you-fetch y estrategias de memoization
+en React.`,
+    ],
+    image: "/noatec.svg",
     company: "Noatec S.A.S.",
     description: `Noatec es una empresa que desarrolla soluciones tecnológicas para la industria del vending con productos en SmartVending, SmartLogistics, SmartDevices y PCBA.`,
   },
   {
     date: "Enero 2023 - Actualidad",
     position: "INGENIERO DESARROLLO",
+    items: [
+      `-Contribuí a la mejora de la estabilidad y el rendimiento de la aplicación, soportando un incremento de más de
+4,000 usuarios en seis meses sin comprometer la calidad`,
+      `-Implementé soluciones de caché y procesamiento asíncrono utilizando Redis, mejorando el rendimiento de
+la aplicación en un 40%.`,
+      `-Desarrollé microservicios escalables con Node.js e integré un API Gateway para la gestión
+centralizada, segura y eficiente de los endpoints. Además, construí interfaces de usuario dinámicas y reutilizables
+con React.js.`,
+    ],
+    image: "/noatec.svg",
     company: "Sistran Andina",
     description: `SISTRAN es una empresa que ofrece soluciones de software y consultoría para compañías de seguros de todo el mundo.`,
   },
