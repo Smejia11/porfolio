@@ -12,7 +12,7 @@
     "@heroicons/react": "2.2.0",
     "@material-tailwind/react": "2.1.9",
     "aos": "2.3.4",
-    "autoprefixer": "10.4.14",
+    "autoprefixer": "10.4.21",
     "next": "15.5.0",
     "notistack": "3.0.2",
     "postcss": "8.4.24",
