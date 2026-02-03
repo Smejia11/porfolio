@@ -13,7 +13,7 @@
     "@material-tailwind/react": "2.1.10",
     "aos": "2.3.4",
     "autoprefixer": "10.4.14",
-    "next": "15.5.9",
+    "next": "16.1.5",
     "notistack": "3.0.2",
     "postcss": "8.4.24",
     "rate-limiter-flexible": "7.3.0",
