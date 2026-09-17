@@ -22,6 +22,12 @@ en React.`,
     image: "/noatec.svg",
     company: "Noatec S.A.S.",
     description: `Noatec es una empresa que desarrolla soluciones tecnológicas para la industria del vending con productos en SmartVending, SmartLogistics, SmartDevices y PCBA.`,
+    links: [
+      {
+        label: "Noacloud",
+        url: "https://noatec.co/unidades-de-negocio/noacloud/",
+      },
+    ],
   },
   {
     date: "Enero 2023 - Actualidad",
@@ -38,6 +44,12 @@ con React.js.`,
     image: "/noatec.svg",
     company: "Sistran Andina",
     description: `SISTRAN es una empresa que ofrece soluciones de software y consultoría para compañías de seguros de todo el mundo.`,
+    links: [
+      {
+        label: "iConnectance",
+        url: "https://www.sistran.com/latam/es/iconnectance/",
+      },
+    ],
   },
 ];
 
